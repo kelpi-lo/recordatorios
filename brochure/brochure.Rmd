@@ -1,0 +1,61 @@
+---
+title: "Servicio de recordatorios"
+author: "Lara Oliver Abogados"
+date: "7/10/2021"
+output:
+  pdf_document:
+    latex_engine: xelatex
+fontsize: 11pt
+header-includes :
+  \usepackage{geometry}
+  \usepackage{graphicx}
+  \usepackage{float}
+  \floatplacement{figure}{H}
+  \tolerance=1
+  \hyphenpenalty=10000
+  \hbadness=10000
+  \linespread{1.2}
+  \usepackage[justification=centering, font=bf, labelsep=period, skip=5pt]{caption}
+  \usepackage{titling}
+  \usepackage{babel}
+  \usepackage{fancyhdr}
+  \pagestyle{fancy}
+  \fancyhead[L]{Maestría en Economía Aplicada}
+  \fancyhead[R]{ITAM}
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F)
+```
+
+El área de tecnología del despacho Lara Oliver cordialmente les ofrece su servicio de recordatorios automáticos. Los servicios consisten en la automatización, a través de un bot, del envio de amables recordatorios de cualquier información que considere relevante a las personas que elija a traves de cuentas telefónicas y correos electrónicos artificiales radicados en México. Todos los mensajes llevan la leyenda, nombre e información de contacto de Lara Oliver Abogados.
+
++ Para los mensajes, se hace una redacción acorde a sus necesidades y a los reglamentos y dispocisiones juridicas pertinentes.
++ Para las llamadas, se hace una grabación acorde a sus necesidades y a los reglamentos y dispocisiones juridicas pertinentes.. 
++ En caso de que lo necesite, los telefonos pueden tener alguna lada en particular sin costo adicional. 
++ Todos los recordatorios se pueden repartir a más personas, en la medida que usted lo requiera, sin costo adicional.
++ Los recordatorios de la siguiente tabla son diarios y el horario de envio se puede definir aleatorio o acorde a alguna estrategia, sin adicional.
+
+
+A continuación le desglozamos nuestros servicios y sus costos:
+
+# Estrategias de recordatorios diarios
+
+```{r, a}
+library(kableExtra)
+estrategia<-c("Básica","Intermedia beta","Intermedia alfa","Intensiva")
+correos<-c(5,10,15,20)
+sms<-c(10,20,30,40)
+llamada <-c(1,2,3,4)
+whatsapp<-c(5,10,15,20)
+precio<-c("1,499 MXN","1,999 MXN","2,299 MXN","2,499 MXN")
+data<-data.frame(estrategia,precio,correos,sms,llamada,whatsapp)
+
+kable(data,escape = F, booktabs=T, col.names = linebreak(c("Estrategia" ,"Precio\nmensual","E-mails","Mensajes SMS","Llamadas", "Mensajes Whatsapp")), digits = 2,align='lr') %>% add_footnote(c("Los recordatorios son diarios"), notation = "symbol")
+```
+
+
+Finalmente, en caso de que lo considere podemos generar una estrategia *ad hoc* a sus necesidades.
+
+
